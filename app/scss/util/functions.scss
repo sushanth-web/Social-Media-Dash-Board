@@ -1,0 +1,18 @@
+//Source :https://css-tricks.com/snippets/sass/px-to-em-functions/
+@use "sass:math";//to make math.div accesible
+
+@function rem($pixels, $context: 16){
+    @return(math.div($pixels,$context))*1rem;
+}
+//it is a function that converts pixels to rems we defined a function named rem which has two parameters pixels and context which is already set to value 16
+//and the funciton returns the parameter user gives which is in pixels and returns pixels divided by 16 multiplied by 1 rem
+//because we all know that on rem is equal to 16 pixels
+
+//implementing the function
+/* h1{
+    font-size: rem(32);//we have given input as 32 pixels which is 2 rems
+}
+//what it is going to look like in normal css
+h1{
+    font-size: 2rem;
+} */

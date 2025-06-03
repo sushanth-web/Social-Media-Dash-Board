@@ -1,0 +1,20 @@
+/* ## Typography
+
+### Body Copy
+
+- Font size (Overview Card Headings): 14px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+ */
+  //these are the fonts specified in the challanges style guide lets create variables for these fonts
+
+:root{
+    --font-inter: "Inter", sans-serif;
+}
+//how to use the function
+/*   body{
+    font-family: var(--font-inter);
+  } */

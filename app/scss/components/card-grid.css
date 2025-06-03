@@ -1,0 +1,41 @@
+/* @mixin is like a function we created a mixin named breakpoint just like a function it also has parameters we created a 
+parameter to the mixin called $size. @mixin genrally loads reusable code you wanna use again we create it with keyword @mixin
+when inside mixin is the code you dont wanna type in everytime. inside mixin we created a media query min width so it runs when 
+the width reaches the specified min width and to get the min width from the specified breakpoints above the mixin we used a method
+called map-get so it gets the specified min width,the first parameter in this method is breakpoints-up so it takes the min width 
+values from breakpoints-up which we have specifies above and the second parameter is size which takes the size from breakpoints-up and stores 
+it as min-width the size indicates small,large,xlarge and its value. @content is the content you wanna run when the webpage reaches the psecified size */
+/* h1{
+    @include breakpoint(large){
+        font-size: 3rem;
+    }
+}//so when the size of page reaches the min-width large i.e, 64em h1's font size becomes 3rem
+//example of how the above code would look like if it was in normal css
+@media(min-width:64em){
+    h1{
+        font-size: 3rem;
+    }
+} */
+/* h1{
+    font-size: rem(32);//we have given input as 32 pixels which is 2 rems
+}
+//what it is going to look like in normal css
+h1{
+    font-size: 2rem;
+} */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-items: start;
+  gap: 1.4375rem;
+}
+.card-grid .card__count {
+  margin-bottom: 0;
+}
+.card-grid .card__count, .card-grid .card__change {
+  align-self: end;
+}
+.card-grid img, .card-grid .card__change {
+  justify-self: end;
+}/*# sourceMappingURL=card-grid.css.map */

@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);//we used auto so that we can add space between two rows if we use 1fr it would not be looking so good
+    justify-items:start;//this will make the item in all the boxes of grid be at starting line of that particular grid box
+    gap:rem(23);
+
+    .card__subtitle{
+
+    }
+
+    .card__count{
+        margin-bottom: 0;
+    }
+
+    .card__count,.card__change{
+        align-self: end;
+    }
+
+    img,.card__change{
+        justify-self: end;
+    }
+}

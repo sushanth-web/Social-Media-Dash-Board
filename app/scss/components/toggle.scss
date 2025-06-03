@@ -1,0 +1,77 @@
+@use '../util' as *;
+//inorder to use the rem function which is defined in the util folder we imported util folder using the keyword @use
+
+.toggle{
+    display: grid;
+    grid-template-columns: 1fr rem(48);
+    border: none;
+    gap: rem(4.8) rem(8);
+    margin: 0;
+    
+    label{
+        font-size: rem(14);
+        cursor: pointer;
+        color:var(--toggle);
+        font-weight: 700;
+
+        &[for="dark"]{
+            line-height:rem(24);
+            margin-right: rem(5);
+        }
+    }
+
+    &__wrapper{
+        height:rem(24);
+        position: relative;
+        display: flex;//to make the radio buttons horizontal instead of vertical 
+    }
+
+    input[type='radio']{
+        opacity: 0;
+        margin:0  2px 0px 2px ;
+        top: 0;
+        width: rem(24);
+        height: rem(24);
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+
+        &:focus ~ .toggle__button{
+            border: 2px solid white;
+        }
+    }
+
+    &__background{
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-radius: rem(12);
+        background: var(--toggle-bg);
+        z-index: 0;
+    }
+
+    &__button{
+        position: absolute;
+        left: rem(3);
+        top: rem(3);
+        width: rem(18);
+        height: rem(18);
+        border-radius: 50%;
+        background-color: var(--toggle-circle);
+        transition: left 0.3 ease;
+        z-index: 1;
+    }
+
+    #dark:checked ~ .toggle__button{// ~ this symbol is called the sibling selector in this line of code it say that apply these changes to .toggle__button if #dark is checked
+        left:rem(3);
+        right: auto; 
+    }
+    #light:checked ~ .toggle__button{
+        left:auto;
+        right: rem(3);
+    }
+
+    
+}
