@@ -2,6 +2,15 @@
 
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)
 
+---
+
+
+<h1>🌐 Live Website</h1>
+https://social-media-dash-board-beta.vercel.app/
+
+
+---
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
